@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="es" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESANMUSO - Ingeniero Informático</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Transiciones suaves de color de fondo y textos para el cambio de modo oscuro/claro */
+    body, nav, section, div, button, input, textarea {
+      transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen font-sans antialiased">
+
+  <!-- HEADER / NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b bg-slate-950/80 border-slate-800 transition-colors duration-300 dark:bg-slate-950/80 dark:border-slate-800 light:bg-white/80 light:border-slate-200" id="navbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-2">
+          <div class="p-2 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-lg text-white font-bold tracking-wider text-sm shadow-md">
+            ESANMUSO
+          </div>
+          <span class="font-semibold text-lg tracking-tight hidden sm:inline-block text-slate-100 dark:text-slate-100 light:text-slate-900" id="brand-text">
+            Esteban Muñoz <span class="text-xs px-2 py-0.5 bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20">Ingeniero</span>
+          </span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-6 text-slate-300 dark:text-slate-300 light:text-slate-700">
+          <a href="#inicio" class="hover:text-indigo-500 transition-colors text-sm font-medium">Inicio</a>
+          <a href="#sobre-mi" class="hover:text-indigo-500 transition-colors text-sm font-medium">Sobre Mí</a>
+          <a href="#experiencia" class="hover:text-indigo-500 transition-colors text-sm font-medium">Experiencia</a>
+          <a href="#habilidades" class="hover:text-indigo-500 transition-colors text-sm font-medium">Habilidades</a>
+          <a href="#servicios" class="hover:text-indigo-500 transition-colors text-sm font-medium">Esteban PC Soporte</a>
+          <a href="#seguridad" class="hover:text-indigo-500 transition-colors text-sm font-medium">Ciberseguridad</a>
+          <a href="#contacto" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-sm font-medium transition-all shadow-lg shadow-indigo-600/20">Contacto</a>
+          
+          <!-- Dark mode Toggle -->
+          <button id="theme-toggle" class="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-yellow-400 dark:bg-slate-800 dark:text-yellow-400 light:bg-slate-100 light:text-slate-800" aria-label="Cambiar modo de tema">
+            <i data-lucide="sun" class="w-[18px] h-[18px] block dark:block" id="sun-icon"></i>
+            <i data-lucide="moon" class="w-[18px] h-[18px] hidden" id="moon-icon"></i>
+          </button>
+        </div>
+
+        <!-- Mobile menu button & Toggle -->
+        <div class="flex items-center gap-4 md:hidden">
+          <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-slate-800 text-yellow-400 dark:bg-slate-800 dark:text-yellow-400 light:bg-slate-100 light:text-slate-800">
+            <i data-lucide="sun" class="w-4 h-4" id="sun-icon-mobile"></i>
+          </button>
+          <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-300 hover:bg-slate-850 dark:text-slate-300 light:text-slate-700 light:hover:bg-slate-100">
+            <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-1 border-t bg-slate-950 border-slate-800 dark:bg-slate-950 dark:border-slate-800 light:bg-white light:border-slate-200">
+      <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-500/10 hover:text-indigo-400">Inicio</a>
+      <a href="#sobre-mi" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-500/10 hover:text-indigo-400">Sobre Mí</a>
+      <a href="#experiencia" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-500/10 hover:text-indigo-400">Experiencia</a>
+      <a href="#habilidades" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-500/10 hover:text-indigo-400">Habilidades</a>
+      <a href="#servicios" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-500/10 hover:text-indigo-400">Esteban PC Soporte</a>
+      <a href="#seguridad" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-indigo-500/10 hover:text-indigo-400">Ciberseguridad</a>
+      <a href="#contacto" class="block w-full text-center px-3 py-2.5 mt-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-md text-base font-medium transition-colors">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <!-- Efectos decorativos de fondo -->
+    <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-blue-500/20 blur-[80px] pointer-events-none"></div>
+    <div class="absolute top-1/2 right-1/4 translate-x-1/2 translate-y-1/2 w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-indigo-500/15 blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Column 1: Info -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shadow-sm animate-pulse">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            Disponible para Contratación / Soporte
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight text-slate-100 dark:text-slate-100 light:text-slate-950">
+            Esteban Andrés <br/>
+            <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">
+              Muñoz Soto
+            </span>
+          </h1>
+          
+          <h2 class="text-xl sm:text-2xl font-bold tracking-wide text-indigo-400 dark:text-indigo-400 light:text-indigo-600">
+            Ingeniero en Informática y Analista Programador
+          </h2>
+          
+          <p class="text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 text-slate-300 dark:text-slate-300 light:text-slate-600 text-justify">
+            Especialista en soporte técnico de hardware, software, optimización de sistemas operativos y auditoría de ciberseguridad web. Más de 10 años brindando soluciones tecnológicas eficientes a colegios, empresas y particulares en Concepción.
+          </p>
+
+          <!-- Botones de acción rápida -->
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a href="#contacto" class="px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-indigo-600/30 flex items-center gap-2 group">
+              Contactar Ahora
+              <i data-lucide="chevron-right" class="w-[18px] h-[18px] group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <a href="#servicios" class="px-6 py-3 font-semibold rounded-xl transition-all border flex items-center gap-2 bg-slate-900 border-slate-800 hover:bg-slate-800 text-white dark:bg-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 light:bg-white light:border-slate-200 light:hover:bg-slate-50 light:text-slate-800">
+              <i data-lucide="wrench" class="w-[18px] h-[18px] text-blue-500"></i>
+              Esteban PC Soporte
+            </a>
+          </div>
+
+          <!-- Datos de Contacto Rápidos -->
+          <div class="flex flex-wrap justify-center lg:justify-start items-center gap-6 pt-4 text-sm">
+            <div class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-indigo-500"></i>
+              <a href="mailto:esanmuso@gmail.com" class="hover:underline font-mono">esanmuso@gmail.com</a>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-emerald-500"></i>
+              <a href="tel:+56997162830" class="hover:underline font-mono">+56 9 97162830</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Tarjeta Visual de Presentación -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative p-6 rounded-3xl border w-full max-w-sm transition-all shadow-2xl bg-slate-900/60 border-slate-800 dark:bg-slate-900/60 dark:border-slate-800 light:bg-white light:border-slate-200">
+            <!-- Insignia Decorativa -->
+            <div class="absolute top-0 right-0 -mr-4 -mt-4 p-4 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl text-white shadow-xl rotate-12">
+              <i data-lucide="shield" class="w-6 h-6"></i>
+            </div>
+            
+            <!-- Contenedor Avatar -->
+            <div class="relative mb-6 rounded-2xl overflow-hidden aspect-square bg-gradient-to-br from-slate-800 to-slate-950 flex flex-col items-center justify-center border border-slate-700/50">
+              <div class="w-36 h-36 rounded-full border-4 border-indigo-500 overflow-hidden bg-slate-900 flex items-center justify-center relative">
+                <!-- Imagen de Perfil con fallback seguro a monograma -->
+                <img 
+                  id="profile-img" 
+                  src="perfil.jpg" 
+                  alt="Esteban Andrés Muñoz Soto" 
+                  class="w-full h-full object-cover hidden" 
+                  onload="this.classList.remove('hidden'); document.getElementById('profile-fallback').classList.add('hidden')"
+                  onerror="this.classList.add('hidden'); document.getElementById('profile-fallback').classList.remove('hidden')"
+                />
+                
+                <!-- Fallback Monograma "E" (Se muestra mientras carga o si falla la imagen) -->
+                <div id="profile-fallback" class="absolute inset-0 flex items-center justify-center bg-slate-900">
+                  <span class="text-5xl font-black text-indigo-400 font-mono tracking-wider">E</span>
+                  <div class="absolute inset-0 bg-indigo-500/10 rounded-full animate-pulse"></div>
+                </div>
+              </div>
+              
+              <div class="mt-4 text-center">
+                <h3 class="font-bold text-xl text-white">Esteban Muñoz Soto</h3>
+                <p class="text-sm text-indigo-400">Concepción, Región del Bío-Bío</p>
+              </div>
+              
+              <div class="absolute bottom-2 left-2 right-2 bg-slate-950/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-slate-800 flex items-center justify-between text-xs font-mono text-slate-300">
+                <span class="text-emerald-400">● ACTIVO</span>
+                <span>esanmuso1997</span>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <div class="p-3 rounded-xl border flex items-center gap-3 bg-slate-950/40 border-slate-800 dark:bg-slate-950/40 dark:border-slate-800 light:bg-slate-50 light:border-slate-200 text-slate-100 dark:text-slate-100 light:text-slate-900">
+                <i data-lucide="graduation-cap" class="w-5 h-5 text-blue-500 shrink-0"></i>
+                <div>
+                  <div class="text-xs text-slate-500">Formación Académica</div>
+                  <div class="text-sm font-semibold">Ingeniero en Informática</div>
+                </div>
+              </div>
+              
+              <div class="p-3 rounded-xl border flex items-center gap-3 bg-slate-950/40 border-slate-800 dark:bg-slate-950/40 dark:border-slate-800 light:bg-slate-50 light:border-slate-200 text-slate-100 dark:text-slate-100 light:text-slate-900">
+                <i data-lucide="cpu" class="w-5 h-5 text-purple-500 shrink-0"></i>
+                <div>
+                  <div class="text-xs text-slate-500">Especialidad Principal</div>
+                  <div class="text-sm font-semibold">Soporte, Redes y Auditoría Web</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCRIPTION & PERSONAL PROFILE -->
+  <section id="sobre-mi" class="py-20 border-y transition-colors bg-slate-900/40 border-slate-900 dark:bg-slate-900/40 dark:border-slate-900 light:bg-white light:border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs uppercase tracking-widest font-black text-indigo-500">Trayectoria & Perfil</h2>
+        <h3 class="text-3xl font-bold text-slate-100 dark:text-slate-100 light:text-slate-900">¿Quién es Esteban Andrés Muñoz Soto?</h3>
+        <p class="text-slate-400 dark:text-slate-400 light:text-slate-600">
+          Una mirada cercana a mi formación, experiencia laboral en Concepción e hitos que han forjado mi perfil profesional.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Side: Biography text -->
+        <div class="lg:col-span-7 space-y-6">
+          <h4 class="text-xl font-bold flex items-center gap-2 text-slate-100 dark:text-slate-100 light:text-slate-900">
+            <i data-lucide="info" class="w-5 h-5 text-indigo-500"></i>
+            Descripción Profesional
+          </h4>
+          <p class="leading-relaxed text-slate-300 dark:text-slate-300 light:text-slate-700">
+            Inicié mi formación profesional en el año 2017 estudiando <strong>Técnico de Nivel Superior en Analista Programador</strong> en el CFT Inacap Concepción-Talcahuano, titulándome en el año 2019. Posteriormente, continué mi desarrollo profesional mediante la continuidad de estudios en <strong>Ingeniería en Informática</strong> en la Universidad Tecnológica de Chile Inacap, obteniendo con éxito mi título profesional en diciembre de 2022.
+          </p>
+          <p class="leading-relaxed text-slate-300 dark:text-slate-300 light:text-slate-700">
+            A lo largo de más de 10 años, he operado como especialista independiente en soporte técnico computacional en Concepción mediante mi marca <strong>Esteban PC Soporte</strong>. Esto me ha permitido afianzar destrezas en formateo avanzado, instalación de sistemas operativos, drivers, eliminación de malware y mantención de equipamiento tecnológico.
+          </p>
+          <p class="leading-relaxed text-slate-300 dark:text-slate-300 light:text-slate-700">
+            Complementariamente, destaco en el área de la <strong>auditoría y ciberseguridad informática</strong>, analizando vulnerabilidades web, y cuento con sólidas capacidades docentes aplicadas como profesor de informática en instituciones educativas locales.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-xl border border-dashed border-slate-700 bg-slate-950/20 dark:border-slate-700 dark:bg-slate-950/20 light:border-slate-300 light:bg-slate-50">
+              <div class="font-extrabold text-2xl text-indigo-400">10+ Años</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Servicio Técnico Computacional</div>
+            </div>
+            <div class="p-4 rounded-xl border border-dashed border-slate-700 bg-slate-950/20 dark:border-slate-700 dark:bg-slate-950/20 light:border-slate-300 light:bg-slate-50">
+              <div class="font-extrabold text-2xl text-emerald-400">Doble Título</div>
+              <div class="text-xs text-slate-500 uppercase tracking-wider mt-1">Ingeniero e Informático INACAP</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Education cards -->
+        <div class="lg:col-span-5 space-y-6">
+          <h4 class="text-xl font-bold flex items-center gap-2 text-slate-100 dark:text-slate-100 light:text-slate-900">
+            <i data-lucide="graduation-cap" class="w-5 h-5 text-blue-500"></i>
+            Educación Formal
+          </h4>
+          
+          <div class="space-y-4" id="education-container">
+            <!-- Renderizado dinámicamente mediante JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILED TIMELINE EXPERIENCE -->
+  <section id="experiencia" class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs uppercase tracking-widest font-black text-blue-500">Historial de Impacto</h2>
+        <h3 class="text-3xl font-bold text-slate-100 dark:text-slate-100 light:text-slate-900">Experiencia Laboral</h3>
+        <p class="text-slate-400 dark:text-slate-400 light:text-slate-600">
+          He trabajado activamente en soporte de red, mantenimiento computacional y docencia en el sector educacional y comercial de la Región del Bío-Bío.
+        </p>
+      </div>
+
+      <div class="relative max-w-3xl mx-auto pl-6 sm:pl-8 border-l border-slate-800 dark:border-slate-800 light:border-slate-200 space-y-12" id="experience-timeline">
+        <!-- Renderizado dinámicamente mediante JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- INTERACTIVE SKILLS FILTER -->
+  <section id="habilidades" class="py-20 border-t transition-colors bg-slate-900/20 border-slate-900 dark:bg-slate-900/20 dark:border-slate-900 light:bg-slate-100 light:border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs uppercase tracking-widest font-black text-indigo-500">Fortalezas Clave</h2>
+        <h3 class="text-3xl font-bold text-slate-100 dark:text-slate-100 light:text-slate-900">Habilidades & Competencias</h3>
+        <p class="text-slate-400 dark:text-slate-400 light:text-slate-600">
+          Filtrar habilidades según área de interés técnico, soporte, seguridad digital o docencia.
+        </p>
+      </div>
+
+      <!-- Filtros -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10" id="skills-filters">
+        <button data-filter="todos" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 border transition-all bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/20">
+          <i data-lucide="layers" class="w-[14px] h-[14px]"></i>
+          Ver Todo
+        </button>
+        <button data-filter="sistemas" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 border transition-all bg-slate-900 border-slate-800 hover:bg-slate-800 text-slate-300 dark:bg-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 light:bg-white light:border-slate-200 light:hover:bg-slate-50 light:text-slate-700">
+          <i data-lucide="cpu" class="w-[14px] h-[14px]"></i>
+          Soporte y Sistemas
+        </button>
+        <button data-filter="seguridad" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 border transition-all bg-slate-900 border-slate-800 hover:bg-slate-800 text-slate-300 dark:bg-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 light:bg-white light:border-slate-200 light:hover:bg-slate-50 light:text-slate-700">
+          <i data-lucide="shield" class="w-[14px] h-[14px]"></i>
+          Ciberseguridad
+        </button>
+        <button data-filter="creativo" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 border transition-all bg-slate-900 border-slate-800 hover:bg-slate-800 text-slate-300 dark:bg-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 light:bg-white light:border-slate-200 light:hover:bg-slate-50 light:text-slate-700">
+          <i data-lucide="video" class="w-[14px] h-[14px]"></i>
+          Diseño y Media
+        </button>
+        <button data-filter="docencia" class="filter-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 border transition-all bg-slate-900 border-slate-800 hover:bg-slate-800 text-slate-300 dark:bg-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 light:bg-white light:border-slate-200 light:hover:bg-slate-50 light:text-slate-700">
+          <i data-lucide="book-open" class="w-[14px] h-[14px]"></i>
+          Educación
+        </button>
+      </div>
+
+      <!-- Lista de Habilidades -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto" id="skills-grid">
+        <!-- Renderizado dinámicamente mediante JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND: ESTEBAN PC SOPORTE & INTERACTIVE CALCULATOR -->
+  <section id="servicios" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Col 1: Brand Info -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20 text-xs font-semibold">
+          <i data-lucide="wrench" class="w-[14px] h-[14px]"></i>
+          Emprendimiento Independiente
+        </div>
+        
+        <h3 class="text-3xl font-black tracking-tight leading-tight text-slate-100 dark:text-slate-100 light:text-slate-900">
+          Esteban PC Soporte <br/>
+          <span class="text-blue-500 text-lg sm:text-xl font-bold tracking-wide">Director Técnico desde 2015</span>
+        </h3>
+        
+        <p class="leading-relaxed text-slate-300 dark:text-slate-300 light:text-slate-700">
+          Una iniciativa dedicada a resolver problemas informáticos cotidianos para particulares y colegios. Abarca soporte en sitio y remoto con un estándar técnico de calidad inigualable.
+        </p>
+
+        <ul class="space-y-3">
+          <li class="flex items-start gap-2.5 text-sm text-slate-300 dark:text-slate-300 light:text-slate-800">
+            <i data-lucide="check" class="text-emerald-500 shrink-0 mt-0.5 w-4 h-4"></i>
+            <span>Formateo rápido y seguro resguardando tus datos críticos.</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-300 dark:text-slate-300 light:text-slate-800">
+            <i data-lucide="check" class="text-emerald-500 shrink-0 mt-0.5 w-4 h-4"></i>
+            <span>Instalación garantizada de sistemas operativos (Windows / Linux).</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-300 dark:text-slate-300 light:text-slate-800">
+            <i data-lucide="check" class="text-emerald-500 shrink-0 mt-0.5 w-4 h-4"></i>
+            <span>Instalación de drivers para un rendimiento óptimo de juegos y trabajo.</span>
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-300 dark:text-slate-300 light:text-slate-800">
+            <i data-lucide="check" class="text-emerald-500 shrink-0 mt-0.5 w-4 h-4"></i>
+            <span>Eliminación total de malware, optimización y limpieza física/lógica.</span>
+          </li>
+        </ul>
+
+        <div class="p-4 rounded-xl border flex items-center gap-3 bg-slate-900 border-slate-800 text-slate-300 dark:bg-slate-900 dark:border-slate-800 light:bg-slate-50 light:border-slate-200 light:text-slate-750">
+          <i data-lucide="info" class="text-blue-400 shrink-0 w-5 h-5"></i>
+          <p class="text-xs">
+            Ubicación principal del servicio en <strong>Las Heras 114 Dpto. 30, Concepción</strong>. Atiendo a toda la intercomuna con agendamiento inmediato.
+          </p>
+        </div>
+      </div>
+
+      <!-- Col 2: Interactive Pricing Calculator -->
+      <div class="lg:col-span-6">
+        <div class="p-6 sm:p-8 rounded-3xl border transition-all bg-slate-900 border-slate-800 dark:bg-slate-900 dark:border-slate-800 light:bg-white light:border-slate-200 light:shadow-xl">
+          <div class="flex items-center justify-between mb-6">
+            <div>
+              <h4 class="font-bold text-xl text-slate-100 dark:text-slate-100 light:text-slate-950">Cotiza tu Servicio</h4>
+              <p class="text-xs text-slate-500">Selecciona los servicios necesarios para obtener una estimación.</p>
+            </div>
+            <i data-lucide="wrench" class="text-blue-500 w-7 h-7"></i>
+          </div>
+
+          <!-- Listado de servicios interactivos -->
+          <div class="space-y-3 mb-6" id="services-calculator">
+            <!-- Renderizado dinámicamente mediante JS -->
+          </div>
+
+          <!-- Total display -->
+          <div class="p-4 rounded-2xl border flex items-center justify-between bg-slate-950 border-slate-800 dark:bg-slate-950 dark:border-slate-800 light:bg-slate-50 light:border-slate-200">
+            <div>
+              <div class="text-xs text-slate-500">Estimación de Costo</div>
+              <div class="text-2xl font-black text-indigo-400 font-mono" id="calculator-total">
+                $0 CLP
+              </div>
+            </div>
+            <a id="whatsapp-confirm" href="https://wa.me/56997162830?text=Hola%20Esteban,%20me%20gustaría%20cotizar%20un%20servicio%20de%20soporte%20informático." target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-bold transition-all shadow-md shadow-emerald-600/20 flex items-center gap-1.5">
+              Confirmar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE CYBERSECURITY AUDIT TERMINAL -->
+  <section id="seguridad" class="py-20 border-t transition-colors bg-slate-900/40 border-slate-900 dark:bg-slate-900/40 dark:border-slate-900 light:bg-white light:border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <h2 class="text-xs uppercase tracking-widest font-black text-rose-500">Ciberseguridad Práctica</h2>
+        <h3 class="text-3xl font-bold text-slate-100 dark:text-slate-100 light:text-slate-900">Auditoría & Análisis de Vulnerabilidades Web</h3>
+        <p class="text-slate-400 dark:text-slate-400 light:text-slate-600">
+          Cuento con conocimientos avanzados en seguridad y auditoría de páginas web. Interactúa con el simulador interactivo de auditoría técnica a continuación.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto">
+        <div class="rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-950 font-mono text-xs sm:text-sm">
+          
+          <!-- Terminal Title Bar -->
+          <div class="bg-slate-900 px-4 py-3 border-b border-slate-800 flex items-center justify-between text-slate-400">
+            <div class="flex items-center gap-2">
+              <div class="flex gap-1.5">
+                <span class="w-3 h-3 rounded-full bg-red-500"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500"></span>
+              </div>
+              <span class="text-xs text-slate-300 ml-2">esanmuso-audit-console-v1.0.sh</span>
+            </div>
+            <i data-lucide="terminal" class="w-4 h-4"></i>
+          </div>
+
+          <!-- Terminal Body -->
+          <div class="p-6 space-y-4 min-h-[300px] text-slate-300">
+            <div class="space-y-1">
+              <p class="text-slate-500"># Esteban Andrés Muñoz Soto - Auditoría Informática</p>
+              <p class="text-slate-500"># Escribe una URL para realizar una simulación de escaneo de puertos y headers:</p>
+            </div>
+
+            <!-- Input action -->
+            <div class="flex flex-col sm:flex-row gap-2 items-stretch sm:items-center">
+              <span class="text-indigo-400 shrink-0 font-bold">$ audit-scanner --target</span>
+              <input 
+                type="text" 
+                id="audit-input"
+                value="www.ejemplo-vulnerable.cl" 
+                class="bg-slate-900 border border-slate-800 text-slate-100 rounded px-3 py-1 text-sm grow focus:outline-none focus:border-indigo-500 font-mono"
+              />
+              <button 
+                id="start-audit-btn"
+                class="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded font-bold transition-all flex items-center gap-1 shrink-0"
+              >
+                <i data-lucide="refresh-cw" class="w-3.5 h-3.5 hidden animate-spin" id="audit-spinner"></i>
+                <span id="audit-btn-text">Escanear</span>
+              </button>
+            </div>
+
+            <!-- Progress Bar inside terminal -->
+            <div id="terminal-progress-container" class="space-y-1.5 hidden">
+              <div class="flex justify-between text-xs text-slate-400">
+                <span>Escaneando estructura web...</span>
+                <span id="terminal-progress-pct">0%</span>
+              </div>
+              <div class="w-full bg-slate-900 h-1.5 rounded overflow-hidden">
+                <div id="terminal-progress-bar" class="bg-emerald-500 h-full transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <!-- Simulated Logs Terminal -->
+            <div class="space-y-2 pt-2 border-t border-slate-900/60 max-h-[220px] overflow-y-auto font-mono text-xs text-slate-300" id="terminal-logs">
+              <p class="text-slate-500 italic">Listo para simular auditoría.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-4 flex gap-4 items-center justify-center text-xs text-slate-500">
+          <span class="flex items-center gap-1"><i data-lucide="shield-alert" class="w-3.5 h-3.5 text-yellow-500"></i> Cumple estándares de auditoría OWASP</span>
+          <span>•</span>
+          <span>Protección proactiva de sistemas locales de Concepción</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM & CONTACT DETAILS -->
+  <section id="contacto" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+      
+      <!-- Contact Details Column -->
+      <div class="lg:col-span-5 space-y-6">
+        <h3 class="text-3xl font-bold tracking-tight text-slate-100 dark:text-slate-100 light:text-slate-950">Estemos en Contacto</h3>
+        <p class="leading-relaxed text-slate-400 dark:text-slate-400 light:text-slate-600">
+          ¿Necesitas soporte técnico con urgencia, buscas un docente informático para tu institución educativa o requieres una auditoría de seguridad para tu sitio web en Concepción? Escríbeme y responderé a la brevedad.
+        </p>
+
+        <div class="space-y-4 pt-4">
+          <div class="p-4 rounded-xl border flex items-center gap-4 bg-slate-900 border-slate-800 dark:bg-slate-900 dark:border-slate-800 light:bg-slate-50 light:border-slate-200 text-slate-100 dark:text-slate-100 light:text-slate-900">
+            <div class="p-3 bg-indigo-500/10 text-indigo-400 rounded-xl">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">Teléfono Celular</div>
+              <a href="tel:+56997162830" class="font-bold text-sm hover:underline font-mono">+56 9 97162830</a>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl border flex items-center gap-4 bg-slate-900 border-slate-800 dark:bg-slate-900 dark:border-slate-800 light:bg-slate-50 light:border-slate-200 text-slate-100 dark:text-slate-100 light:text-slate-900">
+            <div class="p-3 bg-blue-500/10 text-blue-400 rounded-xl">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">Correo Electrónico</div>
+              <a href="mailto:esanmuso@gmail.com" class="font-bold text-sm hover:underline font-mono">esanmuso@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl border flex items-center gap-4 bg-slate-900 border-slate-800 dark:bg-slate-900 dark:border-slate-800 light:bg-slate-50 light:border-slate-200 text-slate-100 dark:text-slate-100 light:text-slate-900">
+            <div class="p-3 bg-purple-500/10 text-purple-400 rounded-xl">
+              <i data-lucide="linkedin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">LinkedIn Profesional</div>
+              <a href="https://www.linkedin.com/in/esanmuso1997" target="_blank" rel="noopener noreferrer" class="font-bold text-sm hover:underline flex items-center gap-1 font-mono">
+                @esanmuso1997
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl border flex items-center gap-4 bg-slate-900 border-slate-800 dark:bg-slate-900 dark:border-slate-800 light:bg-slate-50 light:border-slate-200 text-slate-100 dark:text-slate-100 light:text-slate-900">
+            <div class="p-3 bg-emerald-500/10 text-emerald-400 rounded-xl">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs text-slate-500">Dirección Física</div>
+              <div class="font-bold text-sm font-mono">Las Heras 114 Dpto. 30, Concepción, Bío-Bío</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form Column -->
+      <div class="lg:col-span-7">
+        <div class="p-6 sm:p-8 rounded-3xl border transition-all bg-slate-900 border-slate-800 dark:bg-slate-900 dark:border-slate-800 light:bg-white light:border-slate-200 light:shadow-xl">
+          <h4 class="font-bold text-xl mb-6 text-slate-100 dark:text-slate-100 light:text-slate-950">Formulario de Contacto Rápido</h4>
+          
+          <div id="form-success-container" class="hidden p-6 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl text-center space-y-3">
+            <i data-lucide="check-circle" class="text-emerald-500 mx-auto w-12 h-12"></i>
+            <h5 class="font-bold text-lg text-emerald-400">¡Mensaje Recibido!</h5>
+            <p class="text-sm text-slate-400 max-w-sm mx-auto">
+              Tu solicitud simulada ha sido procesada con éxito. Esteban te responderá a tu correo electrónico lo antes posible.
+            </p>
+          </div>
+
+          <form id="contact-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1.5">
+                <label class="text-xs font-bold text-slate-400 uppercase">Tu Nombre</label>
+                <input 
+                  type="text" 
+                  id="form-name"
+                  required
+                  class="w-full px-4 py-2.5 rounded-xl border text-sm transition-all focus:outline-none focus:ring-1 focus:ring-indigo-500 bg-slate-950 border-slate-800 text-white dark:bg-slate-950 dark:border-slate-800 dark:text-white light:bg-slate-50 light:border-slate-200 light:text-slate-950"
+                  placeholder="Ej. Juan Pérez"
+                />
+              </div>
+              <div class="space-y-1.5">
+                <label class="text-xs font-bold text-slate-400 uppercase">Tu Correo Electrónico</label>
+                <input 
+                  type="email" 
+                  id="form-email"
+                  required
+                  class="w-full px-4 py-2.5 rounded-xl border text-sm transition-all focus:outline-none focus:ring-1 focus:ring-indigo-500 bg-slate-950 border-slate-800 text-white dark:bg-slate-950 dark:border-slate-800 dark:text-white light:bg-slate-50 light:border-slate-200 light:text-slate-950"
+                  placeholder="juan.perez@correo.cl"
+                />
+              </div>
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="text-xs font-bold text-slate-400 uppercase">Tu Mensaje</label>
+              <textarea 
+                rows="4"
+                id="form-message"
+                required
+                class="w-full px-4 py-3 rounded-xl border text-sm transition-all focus:outline-none focus:ring-1 focus:ring-indigo-500 bg-slate-950 border-slate-800 text-white dark:bg-slate-950 dark:border-slate-800 dark:text-white light:bg-slate-50 light:border-slate-200 light:text-slate-950"
+                placeholder="Escribe aquí los detalles del servicio técnico, clases o auditoría..."
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit"
+              class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold rounded-xl transition-all shadow-lg shadow-indigo-600/25 flex items-center justify-center gap-2"
+            >
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              Enviar Mensaje Directo
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 border-t transition-colors bg-slate-950 border-slate-900 text-slate-400 dark:bg-slate-950 dark:border-slate-900 light:bg-slate-100 light:border-slate-200 light:text-slate-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-left">
+          <span class="font-extrabold text-lg text-slate-200 dark:text-white light:text-slate-800">ESANMUSO</span>
+          <p class="text-xs mt-0.5">Esteban Andrés Muñoz Soto • Ingeniero en Informática</p>
+        </div>
+        <div class="flex items-center gap-4 text-slate-400 dark:text-slate-400 light:text-slate-600">
+          <a href="https://www.linkedin.com/in/esanmuso1997" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">
+            <i data-lucide="linkedin" class="w-5 h-5"></i>
+          </a>
+          <a href="mailto:esanmuso@gmail.com" class="hover:text-indigo-400 transition-colors">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="border-t border-slate-900/60 dark:border-slate-900/60 light:border-slate-200 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <p>© 2026 ESANMUSO. Todos los derechos reservados. Concepción, Bío-Bío, Chile.</p>
+        <div class="flex gap-4">
+          <a href="#inicio" class="hover:underline">Volver Arriba</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // --- ESTADO DEL TEMA (MODO OSCURO / CLARO) ---
+    const htmlElement = document.documentElement;
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleMobileBtn = document.getElementById('theme-toggle-mobile');
+
+    function updateThemeIcons() {
+      const isDark = htmlElement.classList.contains('dark');
+      const sunIcons = [document.getElementById('sun-icon'), document.getElementById('sun-icon-mobile')];
+      const moonIcon = document.getElementById('moon-icon');
+
+      if (isDark) {
+        sunIcons.forEach(icon => { if(icon) icon.classList.remove('hidden'); });
+        if(moonIcon) moonIcon.classList.add('hidden');
+        document.body.className = "bg-slate-950 text-slate-100 min-h-screen font-sans antialiased";
+      } else {
+        sunIcons.forEach(icon => { if(icon) icon.classList.add('hidden'); });
+        if(moonIcon) moonIcon.classList.remove('hidden');
+        document.body.className = "bg-slate-50 text-slate-900 min-h-screen font-sans antialiased";
+      }
+    }
+
+    function toggleTheme() {
+      if (htmlElement.classList.contains('dark')) {
+        htmlElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      } else {
+        htmlElement.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+      }
+      updateThemeIcons();
+    }
+
+    themeToggleBtn.addEventListener('click', toggleTheme);
+    themeToggleMobileBtn.addEventListener('click', toggleTheme);
+
+    // Inicializar el tema basado en caché o preferencias
+    if (localStorage.getItem('theme') === 'light') {
+      htmlElement.classList.remove('dark');
+    } else {
+      htmlElement.classList.add('dark');
+    }
+    updateThemeIcons();
+
+    // --- MENÚ MÓVIL ---
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Cerrar menú móvil al hacer clic en un enlace
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // --- RENDERIZADO DE EDUCACIÓN ---
+    const educationData = [
+      {
+        school: 'UTECH INACAP CONCEPCIÓN-TALCAHUANO',
+        degree: 'Ingeniería Informática',
+        period: '2020 - 2022',
+        status: 'Titulado en Diciembre 2022',
+        desc: 'Formación avanzada en ingeniería de software, arquitectura de sistemas, auditoría de seguridad informática y gestión de redes.'
+      },
+      {
+        school: 'CFT INACAP CONCEPCIÓN-TALCAHUANO',
+        degree: 'Analista Programador (TNS)',
+        period: '2017 - 2019',
+        status: 'Titulado',
+        desc: 'Especialización técnica en desarrollo de sistemas, bases de datos y soporte técnico de sistemas operativos.'
+      },
+      {
+        school: 'COLEGIO GRAN BRETAÑA DE CONCEPCIÓN',
+        degree: 'Enseñanza Básica y Media',
+        period: '2004 - 2015',
+        status: 'Egresado',
+        desc: 'Educación escolar completa con sólido interés temprano en ciencias de la computación y tecnología.'
+      }
+    ];
+
+    const educationContainer = document.getElementById('education-container');
+    educationContainer.innerHTML = educationData.map(edu => `
+      <div class="p-5 rounded-2xl border transition-all bg-slate-950/60 border-slate-800 dark:bg-slate-950/60 dark:border-slate-800 light:bg-slate-50 light:border-slate-200">
+        <div class="flex justify-between items-start gap-4">
+          <div>
+            <span class="text-xs font-semibold px-2 py-1 bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20">
+              ${edu.period}
+            </span>
+            <h5 class="font-bold text-lg mt-2 text-slate-100 dark:text-slate-100 light:text-slate-900">${edu.degree}</h5>
+            <p class="text-xs font-medium text-slate-500 mt-0.5">${edu.school}</p>
+          </div>
+        </div>
+        <p class="text-xs mt-3 leading-relaxed text-slate-400 dark:text-slate-400 light:text-slate-600">
+          ${edu.desc}
+        </p>
+        <div class="mt-3 flex items-center gap-1.5 text-xs text-emerald-500 font-semibold">
+          <i data-lucide="check-circle" class="w-3.5 h-3.5"></i>
+          ${edu.status}
+        </div>
+      </div>
+    `).join('');
+
+    // --- RENDERIZADO DE EXPERIENCIA LABORAL (TIMELINE) ---
+    const experienceData = [
+      {
+        period: '15-05-2024 al 18-06-2024',
+        role: 'Encargado de Informática',
+        company: 'Centro Educacional Alborada de Penco',
+        desc: 'Gestión y soporte de infraestructura tecnológica educativa, mantenimiento de redes, soporte técnico integral a docentes y alumnos.',
+        icon: 'briefcase'
+      },
+      {
+        period: '04-09-2024 al 12-09-2024',
+        role: 'Encargado de Informática',
+        company: 'Colegio de los Sagrados Corazones de Concepción',
+        desc: 'Soporte informático especializado de alta disponibilidad, resolución rápida de contingencias tecnológicas durante períodos críticos.',
+        icon: 'briefcase'
+      },
+      {
+        period: '03-03-2023 al 29-02-2024',
+        role: 'Encargado de Informática',
+        company: 'Liceo Domingo Santa María de Concepción',
+        desc: 'Administración de laboratorios de computación, soporte del sistema educativo digital, optimización del equipamiento computacional del establecimiento.',
+        icon: 'briefcase'
+      },
+      {
+        period: '27-10-2022 al 23-12-2022',
+        role: 'Encargado de Informática Reemplazante',
+        company: 'Liceo Domingo Santa María de Concepción',
+        desc: 'Reemplazo y gestión de requerimientos tecnológicos urgentes, soporte técnico de equipos y redes.',
+        icon: 'briefcase'
+      },
+      {
+        period: '03-08-2022 al 12-09-2022',
+        role: 'Docente Reemplazante EMTP',
+        company: 'Liceo Polivalente Experimental de Concepción',
+        desc: 'Dictado de clases especializadas en el área técnico profesional de informática, capacitando alumnos en soporte, redes y desarrollo.',
+        icon: 'book-open'
+      },
+      {
+        period: '2022',
+        role: 'Práctica Profesional de Ingeniería',
+        company: 'Liceo Domingo Santa María de Concepción',
+        desc: 'Puesta en marcha de proyectos tecnológicos escolares, auditoría de sistemas e inventario tecnológico.',
+        icon: 'award' // Mapeado a un icono estándar
+      },
+      {
+        period: '2015 al Presente',
+        role: 'Director Técnico y Fundador',
+        company: 'Esteban PC Soporte',
+        desc: 'Servicio técnico informático independiente. Formateo de PCs, instalación de sistemas operativos, drivers, eliminación de virus, optimización de velocidad de computadores y asesorías personalizadas para clientes locales de Concepción.',
+        icon: 'wrench'
+      }
+    ];
+
+    const experienceTimeline = document.getElementById('experience-timeline');
+    experienceTimeline.innerHTML = experienceData.map(exp => `
+      <div class="relative group">
+        <!-- Timeline bullet -->
+        <div class="absolute -left-[39px] sm:-left-[47px] top-1 p-2 rounded-xl bg-slate-950 border border-slate-800 text-indigo-400 group-hover:text-white group-hover:bg-indigo-600 transition-all shadow-md dark:bg-slate-950 dark:border-slate-800 light:bg-white light:border-slate-200">
+          <i data-lucide="${exp.icon}" class="w-4 h-4"></i>
+        </div>
+
+        <!-- Experience Card -->
+        <div class="p-6 rounded-2xl border transition-all bg-slate-900/40 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900 dark:bg-slate-900/40 dark:border-slate-800/80 light:bg-white light:border-slate-200 light:hover:border-slate-300 light:shadow-sm">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div>
+              <span class="text-xs font-semibold px-2 py-0.5 bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20">
+                ${exp.period}
+              </span>
+              <h4 class="font-extrabold text-lg sm:text-xl mt-1 text-slate-100 dark:text-slate-100 light:text-slate-950">
+                ${exp.role}
+              </h4>
+            </div>
+            <div class="text-xs font-mono font-bold text-indigo-400 sm:text-right">
+              ${exp.company}
+            </div>
+          </div>
+          <p class="text-sm leading-relaxed text-slate-300 dark:text-slate-300 light:text-slate-650">
+            ${exp.desc}
+          </p>
+        </div>
+      </div>
+    `).join('');
+
+    // --- HABILIDADES & FILTRADO INTERACTIVO ---
+    const skillsData = [
+      { name: 'Windows Server & Client', level: 'Alto', pct: 95, category: 'sistemas' },
+      { name: 'Ubuntu & Linux OS', level: 'Medio', pct: 70, category: 'sistemas' },
+      { name: 'Auditoría Web & Pentesting', level: 'Experto', pct: 90, category: 'seguridad' },
+      { name: 'Formateo y Diagnóstico Hardware', level: 'Alto', pct: 100, category: 'sistemas' },
+      { name: 'Herramientas de Ofimática', level: 'Alto', pct: 95, category: 'sistemas' },
+      { name: 'Diseño Gráfico con Canva', level: 'Alto', pct: 85, category: 'creativo' },
+      { name: 'Edición de Video (CapCut, Filmora)', level: 'Alto', pct: 80, category: 'creativo' },
+      { name: 'Google Workspace / Cloud', level: 'Alto', pct: 90, category: 'sistemas' },
+      { name: 'Clases de Informática y Docencia', level: 'Alto', pct: 85, category: 'docencia' },
+      { name: 'Desarrollo de Software / Programación', level: 'Medio-Alto', pct: 75, category: 'sistemas' }
+    ];
+
+    const skillsGrid = document.getElementById('skills-grid');
+
+    function renderSkills(filter = 'todos') {
+      const filtered = filter === 'todos' ? skillsData : skillsData.filter(s => s.category === filter);
+      
+      skillsGrid.innerHTML = filtered.map(sk => {
+        let categoryIcon = 'cpu';
+        let iconColor = 'text-blue-400';
+        if (sk.category === 'seguridad') { categoryIcon = 'shield'; iconColor = 'text-red-400'; }
+        else if (sk.category === 'creativo') { categoryIcon = 'video'; iconColor = 'text-purple-400'; }
+        else if (sk.category === 'docencia') { categoryIcon = 'book-open'; iconColor = 'text-emerald-400'; }
+
+        return `
+          <div class="p-5 rounded-2xl border transition-all bg-slate-950/60 border-slate-800 hover:border-indigo-500/20 dark:bg-slate-950/60 dark:border-slate-800 light:bg-white light:border-slate-200 light:shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <div class="flex items-center gap-2">
+                <i data-lucide="${categoryIcon}" class="${iconColor} w-[18px] h-[18px]"></i>
+                <span class="font-bold text-slate-100 dark:text-slate-100 light:text-slate-800">${sk.name}</span>
+              </div>
+              <span class="text-xs font-bold px-2.5 py-1 bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20">
+                Nivel ${sk.level}
+              </span>
+            </div>
+            
+            <div class="w-full bg-slate-800/60 h-2 rounded-full overflow-hidden dark:bg-slate-800/60 light:bg-slate-200">
+              <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-full transition-all duration-1000" style="width: ${sk.pct}%"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+      
+      // Reinicializar iconos para la nueva tanda inyectada
+      lucide.createIcons();
+    }
+
+    // Configurar controladores de eventos para los filtros
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Deseleccionar todos
+        filterButtons.forEach(b => {
+          b.className = "filter-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 border transition-all bg-slate-900 border-slate-800 hover:bg-slate-800 text-slate-300 dark:bg-slate-900 dark:border-slate-800 dark:hover:bg-slate-800 light:bg-white light:border-slate-200 light:hover:bg-slate-50 light:text-slate-700";
+        });
+        
+        // Seleccionar activo
+        btn.className = "filter-btn px-4 py-2 rounded-xl text-sm font-semibold flex items-center gap-2 border transition-all bg-indigo-600 border-indigo-500 text-white shadow-lg shadow-indigo-600/20";
+        
+        const filterVal = btn.getAttribute('data-filter');
+        renderSkills(filterVal);
+      });
+    });
+
+    // Carga inicial
+    renderSkills();
+
+    // --- CALCULADORA INTERACTIVA DE PRESUPUESTOS ---
+    const servicesData = [
+      { id: 'format', name: 'Formateo + Instalación de S.O.', price: 25000, desc: 'Instalación limpia de Windows/Ubuntu, drivers y programas esenciales.' },
+      { id: 'drivers', name: 'Optimización y Drivers', price: 15000, desc: 'Actualización y solución de conflictos de hardware y rendimiento lento.' },
+      { id: 'audit', name: 'Auditoría Web Inicial', price: 60000, desc: 'Búsqueda de vulnerabilidades principales (OWASP Top 10) con reporte.' },
+      { id: 'tutoring', name: 'Clase/Asesoría Informática (1hr)', price: 15000, desc: 'Clases particulares de computación, ofimática o herramientas Google.' },
+      { id: 'design', name: 'Diseño Canva / Edición Video', price: 20000, desc: 'Creación de contenido visual o edición de vídeos cortos (CapCut/Filmora).' }
+    ];
+
+    let selectedServices = [];
+
+    function renderCalculator() {
+      const calculatorContainer = document.getElementById('services-calculator');
+      calculatorContainer.innerHTML = servicesData.map(svc => {
+        const isSelected = selectedServices.includes(svc.id);
+        const buttonClass = isSelected 
+          ? 'w-full text-left p-4 rounded-xl border transition-all flex items-start justify-between gap-4 border-indigo-500 bg-indigo-500/5 ring-1 ring-indigo-500'
+          : 'w-full text-left p-4 rounded-xl border transition-all flex items-start justify-between gap-4 border-slate-800 bg-slate-950/40 hover:bg-slate-800 dark:border-slate-800 dark:bg-slate-950/40 dark:hover:bg-slate-800 light:border-slate-200 light:bg-slate-50 light:hover:bg-slate-100';
+
+        const checkboxContent = isSelected 
+          ? '<i data-lucide="check" class="w-3.5 h-3.5 text-white"></i>' 
+          : '';
+        const checkboxClass = isSelected
+          ? 'w-4 h-4 rounded border flex items-center justify-center bg-indigo-600 border-indigo-500 shrink-0'
+          : 'w-4 h-4 rounded border flex items-center justify-center border-slate-600 shrink-0';
+
+        return `
+          <button type="button" onclick="toggleService('${svc.id}')" class="${buttonClass}">
+            <div class="space-y-1">
+              <div class="font-bold text-sm flex items-center gap-2 text-slate-100 dark:text-slate-100 light:text-slate-900">
+                <div class="${checkboxClass}">${checkboxContent}</div>
+                ${svc.name}
+              </div>
+              <p class="text-xs text-slate-400 leading-normal pl-6">${svc.desc}</p>
+            </div>
+            <span class="font-mono text-sm font-bold text-indigo-400 shrink-0">
+              $${svc.price.toLocaleString('es-CL')}
+            </span>
+          </button>
+        `;
+      }).join('');
+      
+      calculateTotal();
+      lucide.createIcons();
+    }
+
+    window.toggleService = function(id) {
+      if (selectedServices.includes(id)) {
+        selectedServices = selectedServices.filter(item => item !== id);
+      } else {
+        selectedServices.push(id);
+      }
+      renderCalculator();
+    }
+
+    // Calcular costos dinámicamente
+    function calculateTotal() {
+      const total = selectedServices.reduce((sum, serviceId) => {
+        const service = servicesData.find(s => s.id === serviceId);
+        return sum + (service ? service.price : 0);
+      }, 0);
+      
+      document.getElementById('calculator-total').innerText = `$${total.toLocaleString('es-CL')} CLP`;
+
+      // Actualizar enlace de whatsapp dinámico
+      const waBtn = document.getElementById('whatsapp-confirm');
+      const textMessage = selectedServices.length > 0 
+        ? `Hola Esteban, me gustaría cotizar los siguientes servicios en Concepción: \n${selectedServices.map(sid => `- ${servicesData.find(s => s.id === sid).name}`).join('\n')}\n\nTotal estimado: $${total.toLocaleString('es-CL')} CLP`
+        : "Hola Esteban, me gustaría cotizar un servicio de soporte informático.";
+      
+      waBtn.href = `https://wa.me/56997162830?text=${encodeURIComponent(textMessage)}`;
+    }
+
+    renderCalculator();
+
+    // --- SIMULADOR DE AUDITORÍA DE SEGURIDAD ---
+    const startAuditBtn = document.getElementById('start-audit-btn');
+    const auditInput = document.getElementById('audit-input');
+    const terminalLogs = document.getElementById('terminal-logs');
+    const progressContainer = document.getElementById('terminal-progress-container');
+    const progressPct = document.getElementById('terminal-progress-pct');
+    const progressBar = document.getElementById('terminal-progress-bar');
+    const auditSpinner = document.getElementById('audit-spinner');
+    const auditBtnText = document.getElementById('audit-btn-text');
+
+    let isAuditing = false;
+
+    startAuditBtn.addEventListener('click', () => {
+      if (isAuditing) return;
+      
+      isAuditing = true;
+      startAuditBtn.disabled = true;
+      auditInput.disabled = true;
+      auditSpinner.classList.remove('hidden');
+      auditBtnText.innerText = "Escaneando...";
+      progressContainer.classList.remove('hidden');
+      terminalLogs.innerHTML = "";
+
+      const auditUrl = auditInput.value || 'www.ejemplo-vulnerable.cl';
+
+      const steps = [
+        { msg: `Iniciando escaneo en ${auditUrl}...`, delay: 500, progress: 15 },
+        { msg: 'Analizando cabeceras HTTP de seguridad (XSS Protection, CSP)...', delay: 1200, progress: 35 },
+        { msg: '¡ADVERTENCIA! Cabecera "Content-Security-Policy" no detectada.', delay: 2000, progress: 50 },
+        { msg: 'Escaneando puertos abiertos estándar y servicios activos...', delay: 2800, progress: 65 },
+        { msg: 'Comprobando vulnerabilidades de inyección SQL en formularios de entrada...', delay: 3500, progress: 80 },
+        { msg: 'Escaneo de directorios ocultos finalizado.', delay: 4200, progress: 95 },
+        { msg: 'Análisis completado. Vulnerabilidades encontradas: 2 de nivel Medio-Alto.', delay: 4800, progress: 100 }
+      ];
+
+      steps.forEach((step) => {
+        setTimeout(() => {
+          const logElement = document.createElement('p');
+          logElement.className = "leading-relaxed";
+          if (step.msg.includes('ADVERTENCIA')) {
+            logElement.classList.add('text-yellow-400', 'font-bold');
+          } else if (step.msg.includes('completado')) {
+            logElement.classList.add('text-emerald-400', 'font-bold');
+          }
+          logElement.innerText = step.msg;
+          terminalLogs.appendChild(logElement);
+          terminalLogs.scrollTop = terminalLogs.scrollHeight;
+
+          progressBar.style.width = `${step.progress}%`;
+          progressPct.innerText = `${step.progress}%`;
+
+          if (step.progress === 100) {
+            isAuditing = false;
+            startAuditBtn.disabled = false;
+            auditInput.disabled = false;
+            auditSpinner.classList.add('hidden');
+            auditBtnText.innerText = "Escanear";
+          }
+        }, step.delay);
+      });
+    });
+
+    // --- FORMULARIO DE CONTACTO SIMULADO ---
+    const contactForm = document.getElementById('contact-form');
+    const formSuccessContainer = document.getElementById('form-success-container');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('form-name').value;
+      const email = document.getElementById('form-email').value;
+      const message = document.getElementById('form-message').value;
+
+      if (name && email && message) {
+        contactForm.classList.add('hidden');
+        formSuccessContainer.classList.remove('hidden');
+
+        // Reinicializar iconos del contenedor de éxito
+        lucide.createIcons();
+
+        // Ocultar mensaje y restaurar formulario tras 5 segundos
+        setTimeout(() => {
+          formSuccessContainer.classList.add('hidden');
+          contactForm.classList.remove('hidden');
+          contactForm.reset();
+        }, 5000);
+      }
+    });
+
+    // Inicialización final de Lucide Icons en toda la estructura estática
+    window.onload = function() {
+      lucide.createIcons();
+    }
+  </script>
+</body>
+</html>
