@@ -1,6 +1,6 @@
 # 👨‍💻 Portafolio Profesional — CV Online
 
-> **Mi portafolio profesional y CV online, desarrollado para presentar mi perfil, conocimientos, habilidades, experiencia y proyectos de manera moderna, clara y profesional.**
+> **Mi portafolio profesional y CV online, creado para presentar mi perfil, experiencia, conocimientos, habilidades, proyectos y trayectoria de manera moderna, clara y profesional.**
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
@@ -8,42 +8,58 @@
 [![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge\&logo=git\&logoColor=white)](https://git-scm.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge\&logo=github\&logoColor=white)](https://github.com/)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge\&logo=github\&logoColor=white)](https://pages.github.com/)
+[![License](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://github.com/emide-soporte/perfil_profesional/blob/master/LICENSE)
 
 ---
 
-## 🌐 Mi Portafolio
+## 🌐 Mi Portafolio Profesional
 
-Mi portafolio profesional se encuentra disponible públicamente en:
+He creado este sitio web como mi **portafolio profesional y CV online**, con el propósito de contar con una presentación digital que reúna información relevante sobre mi perfil, experiencia, conocimientos, habilidades y proyectos.
 
-### 🔗 https://emide-soporte.github.io/perfil_profesional/
+### 🔗 Sitio web
 
-Este sitio funciona como mi **CV digital y carta de presentación profesional**, permitiendo mostrar de manera organizada mi perfil, conocimientos, habilidades, experiencia y proyectos.
+**https://emide-soporte.github.io/perfil_profesional/**
+
+El sitio está publicado mediante **GitHub Pages** y puede ser consultado desde computadores, notebooks, tablets y dispositivos móviles.
 
 ---
 
 # 👋 Sobre este proyecto
 
-He desarrollado este sitio web como mi **portafolio profesional y CV online**, con el objetivo de disponer de una presentación digital moderna, accesible y profesional.
+Este proyecto corresponde a mi **portafolio profesional / currículum vitae online**.
 
-A través de este proyecto busco reunir en un solo lugar información relacionada con mi perfil profesional, mis conocimientos, mis capacidades y los proyectos que he desarrollado o en los que he participado.
+Lo desarrollé con la finalidad de presentar mi información profesional de una forma más moderna, accesible y dinámica que un currículum tradicional.
 
-Este portafolio representa además una muestra práctica de mis conocimientos en desarrollo web, diseño, organización de contenidos y utilización de diferentes herramientas tecnológicas.
+A través de este sitio puedo reunir en un mismo espacio:
+
+* Mi presentación profesional.
+* Mi información personal y profesional.
+* Mis conocimientos.
+* Mis habilidades.
+* Mi experiencia.
+* Mis proyectos.
+* Mis intereses profesionales.
+* Información de contacto.
+* Otros antecedentes relevantes de mi trayectoria.
+
+Este proyecto también representa una aplicación práctica de mis conocimientos relacionados con el desarrollo web y las herramientas digitales.
 
 ---
 
-# 🎯 Objetivos
+# 🎯 Objetivos del proyecto
 
-Los principales objetivos de este proyecto son:
+Los principales objetivos de mi portafolio son:
 
 * Presentar mi perfil profesional.
+* Disponer de mi CV en formato digital.
 * Mostrar mis conocimientos y habilidades.
+* Presentar mi experiencia profesional.
 * Dar a conocer mis proyectos.
-* Presentar mi experiencia y trayectoria.
-* Mantener mi CV disponible online.
-* Facilitar el contacto profesional.
+* Demostrar conocimientos de desarrollo web.
 * Contar con una presencia profesional en Internet.
-* Aplicar y demostrar conocimientos de desarrollo web.
-* Mantener un proyecto actualizable y en constante evolución.
+* Facilitar el contacto profesional.
+* Mantener mi información disponible y actualizada.
+* Continuar mejorando mis conocimientos mediante el desarrollo del proyecto.
 
 ---
 
@@ -51,15 +67,15 @@ Los principales objetivos de este proyecto son:
 
 ## 📄 CV Online
 
-He desarrollado el sitio como una versión digital de mi currículum profesional, permitiendo acceder a mi información desde cualquier dispositivo con conexión a Internet.
+El sitio funciona como una versión digital de mi currículum vitae, permitiendo acceder a mi información profesional directamente desde un navegador web.
 
 ## 🎨 Diseño profesional
 
-El diseño está orientado a entregar una presentación moderna, ordenada y visualmente atractiva, procurando que la información sea fácil de encontrar y comprender.
+He buscado desarrollar una interfaz moderna, ordenada y visualmente atractiva, procurando que la información sea clara y fácil de consultar.
 
 ## 📱 Diseño Responsive
 
-El sitio está preparado para adaptarse a diferentes tamaños de pantalla:
+El portafolio está diseñado para adaptarse a diferentes dispositivos y tamaños de pantalla:
 
 * 🖥️ Computadores de escritorio.
 * 💻 Notebooks.
@@ -68,23 +84,23 @@ El sitio está preparado para adaptarse a diferentes tamaños de pantalla:
 
 ## ⚡ Interactividad
 
-Mediante **JavaScript**, el sitio incorpora funcionalidades dinámicas e interactivas que permiten mejorar la experiencia de navegación y presentación del contenido.
+El proyecto incorpora **JavaScript** para proporcionar comportamiento dinámico e interacción dentro de la interfaz.
 
-## 🌐 Acceso online
+## 🌐 Disponible online
 
-Mi portafolio se encuentra publicado en Internet mediante **GitHub Pages**, permitiendo que pueda ser consultado desde cualquier lugar.
+Mi portafolio se encuentra publicado en Internet mediante **GitHub Pages**, permitiendo acceder a él desde cualquier lugar con conexión a Internet.
 
-## 🔄 Actualización
+## 🔄 Actualización permanente
 
-El proyecto está pensado para poder incorporar progresivamente:
+El proyecto puede evolucionar a medida que avance mi trayectoria profesional, permitiendo incorporar:
 
 * Nuevos proyectos.
 * Nuevas habilidades.
+* Nuevas tecnologías.
 * Nuevos conocimientos.
-* Experiencia profesional.
-* Certificaciones.
+* Experiencias profesionales.
 * Cursos.
-* Tecnologías.
+* Certificaciones.
 * Mejoras visuales.
 * Nuevas funcionalidades.
 
@@ -92,35 +108,35 @@ El proyecto está pensado para poder incorporar progresivamente:
 
 # 🛠️ Tecnologías utilizadas
 
-Para desarrollar este proyecto he utilizado diferentes tecnologías y herramientas relacionadas con el desarrollo web.
+Para desarrollar mi portafolio profesional he utilizado diferentes tecnologías y herramientas relacionadas con el desarrollo web.
 
-### HTML5
+## HTML5
 
-Utilizado para construir la estructura y organización del contenido del sitio.
+Utilizado para construir la estructura, organización y contenido del sitio web.
 
-### CSS3
+## CSS3
 
-Utilizado para desarrollar la presentación visual, estilos, distribución, tipografías, espacios y adaptación responsive.
+Utilizado para desarrollar el diseño visual, estilos, distribución, tipografías, espacios y adaptación responsive.
 
-### JavaScript
+## JavaScript
 
 Utilizado para incorporar **interactividad, funcionalidades dinámicas, comportamiento de componentes y lógica del sitio web**.
 
-### Git
+## Git
 
 Utilizado para el control de versiones y seguimiento de los cambios realizados durante el desarrollo.
 
-### GitHub
+## GitHub
 
 Utilizado para almacenar, administrar y mantener el código fuente del proyecto.
 
-### GitHub Pages
+## GitHub Pages
 
 Utilizado para publicar y alojar mi portafolio profesional en Internet.
 
 ---
 
-## 💻 Stack principal
+# 💻 Stack principal
 
 ```text
 HTML5
@@ -135,49 +151,39 @@ GitHub Pages
 
 # 📊 Tecnologías y herramientas
 
-| Tecnología / Herramienta | Utilización                        |
-| ------------------------ | ---------------------------------- |
-| HTML5                    | Estructura del sitio               |
-| CSS3                     | Diseño y estilos                   |
-| JavaScript               | Interactividad y funcionalidades   |
-| Git                      | Control de versiones               |
-| GitHub                   | Repositorio y gestión del proyecto |
-| GitHub Pages             | Publicación del sitio              |
+| Tecnología / Herramienta | Utilización                                |
+| ------------------------ | ------------------------------------------ |
+| **HTML5**                | Estructura y contenido del sitio           |
+| **CSS3**                 | Diseño, estilos y presentación visual      |
+| **JavaScript**           | Interactividad y funcionalidades dinámicas |
+| **Git**                  | Control de versiones                       |
+| **GitHub**               | Repositorio y gestión del proyecto         |
+| **GitHub Pages**         | Publicación y alojamiento del sitio        |
 
 ---
 
-# 📂 Estructura del proyecto
+# 📂 Estructura del repositorio
 
-La estructura del proyecto se encuentra organizada para facilitar su mantenimiento y futuras actualizaciones.
+Actualmente, el repositorio contiene los principales archivos y recursos utilizados por el proyecto.
 
 ```text
 perfil_profesional/
 │
-├── index.html
+├── LICENSE
 ├── README.md
-│
-├── css/
-│   └── styles.css
-│
-├── js/
-│   └── script.js
-│
-├── images/
-│   └── ...
-│
-└── assets/
-    └── ...
+├── index.html
+├── index.html.original
+├── perfil-icono.png
+└── perfil.jpg
 ```
 
-> La estructura puede evolucionar a medida que se incorporen nuevas funcionalidades y recursos al proyecto.
+La estructura del proyecto puede modificarse y ampliarse a medida que continúe desarrollando nuevas funcionalidades y actualizaciones.
 
 ---
 
 # 🚀 Publicación
 
-Mi portafolio se encuentra publicado mediante **GitHub Pages**.
-
-Esto permite disponer de una versión online del proyecto sin necesidad de utilizar un servidor tradicional.
+Mi portafolio está publicado mediante **GitHub Pages**, permitiendo disponer de una versión web pública de mi CV y portafolio profesional.
 
 ### 🌐 Sitio publicado
 
@@ -187,92 +193,98 @@ Esto permite disponer de una versión online del proyecto sin necesidad de utili
 
 # 💻 Ejecución local
 
-Si deseas ejecutar el proyecto localmente, puedes clonar el repositorio:
+Si deseas descargar una copia del proyecto para ejecutarla localmente, puedes clonar el repositorio:
 
 ```bash
 git clone https://github.com/emide-soporte/perfil_profesional.git
 ```
 
-Ingresar al directorio:
+Luego:
 
 ```bash
 cd perfil_profesional
 ```
 
-Y posteriormente abrir:
+Y puedes abrir:
 
 ```text
 index.html
 ```
 
-También es posible utilizar herramientas como **Visual Studio Code + Live Server** para ejecutar el proyecto mediante un servidor local.
+También es posible utilizar **Visual Studio Code** junto con una extensión como **Live Server** para ejecutar el proyecto mediante un servidor local.
 
 ---
 
 # 🤖 Inteligencia Artificial
 
-Durante el desarrollo de este proyecto utilicé **Claude**, herramienta de inteligencia artificial desarrollada por Anthropic, como apoyo en diferentes etapas del proceso.
+Durante el desarrollo de este proyecto utilicé **Claude**, desarrollado por **Anthropic**, como herramienta de apoyo en diferentes etapas del proceso.
 
-La inteligencia artificial fue utilizada como una herramienta de asistencia para tareas relacionadas con:
+La inteligencia artificial fue utilizada como asistencia para determinadas tareas relacionadas con:
 
 * Desarrollo web.
 * Programación.
-* Organización del contenido.
+* Organización del código.
+* Estructuración del proyecto.
 * Generación y revisión de código.
 * Ideas de diseño.
-* Estructuración del proyecto.
+* Organización del contenido.
+* Resolución de problemas.
 * Optimización de determinados elementos.
-* Resolución de problemas durante el desarrollo.
+* Apoyo durante el proceso creativo y técnico.
 
-La utilización de inteligencia artificial **no significa que el proyecto sea una creación autónoma de dicha herramienta**.
+La utilización de inteligencia artificial fue parte de mi proceso de desarrollo y **no sustituye mi participación, criterio ni decisiones sobre el proyecto**.
 
-La dirección del proyecto, selección de contenidos, decisiones de diseño, personalización, integración, revisión, modificaciones y resultado final corresponden a mi trabajo y criterio.
+La dirección del proyecto, selección de contenidos, personalización, integración, revisión, modificaciones y resultado final corresponden a mi trabajo y criterio.
 
 ---
 
 # 🧠 Desarrollo y aprendizaje
 
-Este proyecto también representa una oportunidad para aplicar y continuar desarrollando mis conocimientos en:
+Este proyecto también representa una oportunidad para aplicar y continuar desarrollando mis conocimientos en diferentes áreas.
+
+Entre ellas:
 
 * Desarrollo web.
-* HTML.
-* CSS.
+* HTML5.
+* CSS3.
 * JavaScript.
 * Diseño responsive.
 * Interfaces web.
+* Experiencia de usuario.
 * Organización de proyectos.
 * Control de versiones.
-* Git y GitHub.
-* Publicación mediante GitHub Pages.
+* Git.
+* GitHub.
+* GitHub Pages.
 * Herramientas de inteligencia artificial aplicadas al desarrollo.
 
-Mi intención es continuar mejorando el proyecto y utilizarlo como parte de mi crecimiento profesional y tecnológico.
+Mi intención es continuar mejorando este proyecto junto con mi crecimiento profesional y tecnológico.
 
 ---
 
 # 📈 Evolución del proyecto
 
-Considero este portafolio como un proyecto en constante evolución.
+Considero este portafolio como un **proyecto en constante evolución**.
 
-A medida que continúe desarrollando mis conocimientos y experiencia, podré incorporar nuevas secciones, proyectos, tecnologías y funcionalidades.
+A medida que continúe adquiriendo conocimientos, experiencia y nuevas competencias, podré incorporar nuevas secciones, proyectos, tecnologías y funcionalidades.
 
-El contenido de este repositorio puede cambiar con el tiempo como parte del proceso de actualización de mi CV y portafolio profesional.
+El contenido del repositorio podrá cambiar con el tiempo como parte de las actualizaciones de mi CV y de mi trayectoria profesional.
 
 ---
 
 # 👨‍💻 Sobre mí
 
-Soy **Esteban PC Soporte** y he creado este espacio como mi presentación profesional en Internet.
+Soy **Esteban PC Soporte** y he desarrollado este espacio como mi presentación profesional en Internet.
 
-Este portafolio reúne parte de mi trabajo, conocimientos, proyectos y capacidades, y tiene como finalidad facilitar la presentación de mi perfil profesional de una manera moderna y accesible.
+Este portafolio reúne parte de mi experiencia, conocimientos, habilidades y proyectos, funcionando como una extensión digital de mi currículum vitae.
 
-Mi objetivo es continuar aprendiendo, desarrollando nuevos proyectos y ampliando mis conocimientos en el área tecnológica.
+Mi objetivo es continuar aprendiendo, desarrollando proyectos y ampliando mis conocimientos en el ámbito tecnológico y profesional.
 
 ---
 
 # 📬 Contacto
 
-Para consultas profesionales, proyectos, colaboraciones o solicitudes relacionadas con mi trabajo, puedes utilizar los medios de contacto disponibles directamente en mi portafolio.
+Para consultas profesionales, proyectos, colaboraciones o información relacionada con mi trabajo, puedes utilizar los medios de contacto disponibles directamente en mi portafolio.
 
 ### 🌐 Portafolio
 
@@ -280,93 +292,149 @@ Para consultas profesionales, proyectos, colaboraciones o solicitudes relacionad
 
 ---
 
-# 🔒 Derechos de autor
+# 📜 Licencia
 
-## © 2026 Esteban PC Soporte
+Este proyecto se distribuye bajo los términos de la:
 
-### Todos los derechos reservados.
+## GNU General Public License v3.0 — GPL-3.0
 
-Este proyecto, incluyendo su diseño, estructura, código fuente original, textos, composición visual, organización, elementos gráficos y demás contenidos originales desarrollados específicamente para este portafolio, se encuentra protegido por los derechos que correspondan a su autor y/o titulares respectivos.
+El repositorio incluye el archivo `LICENSE` correspondiente a la licencia **GPL-3.0**.
 
-**La publicación pública de este proyecto no constituye una autorización para copiarlo, reproducirlo, modificarlo, distribuirlo o reutilizarlo.**
+Puedes consultar la licencia completa en:
+
+**[GPL-3.0 License](https://github.com/emide-soporte/perfil_profesional/blob/master/LICENSE)**
+
+La GPL-3.0 establece las condiciones bajo las cuales el software puede utilizarse, estudiarse, modificarse y redistribuirse.
+
+La licencia debe ser interpretada de acuerdo con sus propios términos y condiciones.
 
 ---
 
-## 🚫 Restricciones de uso
+# ⚖️ Alcance de la licencia
 
-Salvo autorización previa y expresa por escrito de **Esteban PC Soporte**, queda prohibido:
+La licencia **GPL-3.0** se aplica al software del proyecto que se encuentre cubierto por dicha licencia.
 
-* ❌ Copiar total o parcialmente el proyecto.
-* ❌ Reproducir el código fuente.
-* ❌ Copiar el diseño visual.
-* ❌ Utilizar el proyecto como plantilla.
-* ❌ Redistribuir el código.
-* ❌ Publicar una copia del sitio.
-* ❌ Modificarlo y publicar una versión derivada.
-* ❌ Comercializar el proyecto.
-* ❌ Comercializar sus componentes originales.
-* ❌ Incorporar sus elementos originales en otros proyectos.
-* ❌ Presentarlo como trabajo propio.
-* ❌ Eliminar o alterar los avisos de derechos de autor.
-* ❌ Utilizar la identidad visual o composición del proyecto para crear otro sitio.
+La existencia de esta licencia **no significa que todos los elementos presentes en mi portafolio sean automáticamente GPL-3.0**.
+
+Algunos contenidos pueden encontrarse sujetos a derechos independientes.
+
+Entre ellos pueden encontrarse:
+
+* Fotografías personales.
+* Imagen personal.
+* Información personal.
+* Información curricular.
+* Textos personales.
+* Identidad visual.
+* Logotipos.
+* Marcas.
+* Elementos gráficos.
+* Recursos de terceros.
+* Fotografías de terceros.
+* Iconos.
+* Fuentes.
+* Librerías.
+* Otros recursos que cuenten con sus propias condiciones de uso.
+
+Los elementos pertenecientes a terceros mantienen sus respectivas licencias y derechos.
+
+---
+
+# 🔐 Derechos de autor
+
+## © 2026 Esteban PC Soporte
+
+### Todos los derechos reservados respecto de los elementos originales no cubiertos por GPL-3.0 o por licencias de terceros.
+
+La publicación de este repositorio y de mi portafolio en Internet permite su **consulta, visualización y estudio conforme a las condiciones aplicables**, pero no implica que todos sus contenidos sean de libre utilización.
+
+Los derechos correspondientes a los elementos personales, visuales, textuales o de otra naturaleza que no estén cubiertos por GPL-3.0 permanecen reservados.
+
+---
+
+# 🚫 Uso de elementos personales
+
+Sin perjuicio de los derechos concedidos por la GPL-3.0 respecto del software cubierto por ella, no se concede mediante este README una autorización independiente para reutilizar mis elementos personales.
+
+Esto incluye, entre otros:
+
+* Mi fotografía.
+* Mi imagen personal.
+* Mi información curricular.
+* Mis datos profesionales.
+* Mi presentación personal.
+* Mis textos originales.
+* Mi identidad visual.
+* Mis logotipos.
+* Materiales originales que haya creado y que no estén cubiertos por la GPL-3.0.
+
+Cualquier uso de estos elementos deberá respetar los derechos que correspondan.
 
 ---
 
 # ⚠️ Importante
 
-El hecho de que el repositorio o el sitio web sean públicos **no significa que el contenido sea de libre uso**.
+**GPL-3.0 no significa que todo el contenido de mi CV o portafolio sea de libre uso.**
 
-La posibilidad de visualizar, acceder o consultar el proyecto no concede automáticamente derechos para:
+La licencia corresponde al software que esté cubierto por ella.
+
+Por lo tanto, no debe interpretarse la licencia como una autorización general para:
+
+* Utilizar mi identidad personal.
+* Copiar mi CV para presentarlo como propio.
+* Utilizar mi fotografía.
+* Reutilizar mi información personal.
+* Apropiarse de mis textos originales.
+* Utilizar mi identidad visual.
+* Hacerse pasar por mí.
+* Crear un perfil profesional utilizando mis antecedentes.
+* Utilizar mis datos profesionales fuera de los usos permitidos.
+
+---
+
+# 📌 Sobre la reproducción del proyecto
+
+Cuando se trate del **software cubierto por GPL-3.0**, su uso, modificación y redistribución deberán realizarse respetando íntegramente las condiciones establecidas por dicha licencia.
+
+En cambio, para elementos que no estén cubiertos por GPL-3.0 —como determinados contenidos personales, fotografías, marcas o recursos de terceros— deberán respetarse sus respectivos derechos y condiciones.
+
+---
+
+# 🧾 Recursos de terceros
+
+Si el proyecto incorpora recursos pertenecientes a terceros, dichos recursos no necesariamente forman parte de la licencia GPL-3.0 de este proyecto.
+
+Cada recurso de terceros conserva sus respectivos derechos, atribuciones y condiciones de uso.
+
+En consecuencia, antes de reutilizar cualquier recurso de terceros, corresponde verificar su licencia particular.
+
+---
+
+# 📄 Archivo LICENSE
+
+El repositorio incluye:
 
 ```text
-COPIAR
-MODIFICAR
-REPRODUCIR
-REDISTRIBUIR
-COMERCIALIZAR
-PUBLICAR
-CREAR OBRAS DERIVADAS
+LICENSE
 ```
 
-Cualquier utilización distinta de la simple visualización o consulta del sitio deberá contar con la autorización correspondiente.
+Este archivo contiene los términos de la licencia **GNU General Public License v3.0** aplicable al software cubierto por ella.
 
 ---
 
-# 📜 Licencia
+# 🔗 Enlaces
 
-Este proyecto **NO se distribuye bajo una licencia Open Source**.
+### 🌐 Portafolio profesional
 
-No se concede mediante este repositorio ninguna licencia para copiar, modificar, distribuir, sublicenciar, comercializar o crear obras derivadas del proyecto.
+https://emide-soporte.github.io/perfil_profesional/
 
-Todos los derechos que no hayan sido expresamente concedidos permanecen reservados.
+### 💻 Repositorio
 
-```text
-Copyright © 2026 Esteban PC Soporte
-Todos los derechos reservados.
-```
+https://github.com/emide-soporte/perfil_profesional
 
----
+### 📜 Licencia GPL-3.0
 
-# 🧾 Aviso sobre recursos de terceros
-
-En caso de que el proyecto utilice recursos, librerías, fuentes, iconos, imágenes, frameworks u otros componentes pertenecientes a terceros, dichos elementos permanecen sujetos a sus respectivas licencias y derechos de autor.
-
-La protección de mis derechos se refiere a los contenidos, código, diseño, composición y elementos originales desarrollados por mí.
-
----
-
-# 🔐 Protección del proyecto
-
-Este repositorio se publica principalmente con fines de:
-
-* Presentación profesional.
-* Portafolio.
-* CV online.
-* Demostración de conocimientos.
-* Presentación de proyectos.
-* Referencia profesional.
-
-La publicación del código en GitHub no debe interpretarse como una autorización para reutilizarlo libremente.
+https://github.com/emide-soporte/perfil_profesional/blob/master/LICENSE
 
 ---
 
@@ -374,28 +442,32 @@ La publicación del código en GitHub no debe interpretarse como una autorizaci�
 
 Gracias por visitar mi portafolio profesional y conocer parte de mi trabajo.
 
-Este proyecto continuará evolucionando junto con mi experiencia, conocimientos y nuevos desafíos profesionales.
+Este proyecto representa una parte de mi trayectoria, mis conocimientos y mi interés por continuar desarrollándome profesional y tecnológicamente.
+
+El proyecto continuará evolucionando a medida que incorpore nuevos conocimientos, experiencias y proyectos.
 
 ---
 
 <div align="center">
 
-## 👨‍💻 Esteban PC Soporte
+# 👨‍💻 Esteban PC Soporte
 
 ### Portafolio Profesional · CV Online
-
-🌐 **https://emide-soporte.github.io/perfil_profesional/**
-
----
 
 **HTML5 · CSS3 · JavaScript · Git · GitHub · GitHub Pages**
 
 ---
 
-### © 2026 Esteban PC Soporte
+🌐 **https://emide-soporte.github.io/perfil_profesional/**
 
-**Todos los derechos reservados.**
+---
 
-**Prohibida la reproducción, copia, modificación, distribución o reutilización sin autorización previa y por escrito.**
+### 📜 GNU GPL-3.0
+
+**Software del proyecto licenciado bajo GPL-3.0, según corresponda.**
+
+**© 2026 Esteban PC Soporte**
+
+**Todos los derechos reservados respecto de los elementos originales no cubiertos por GPL-3.0 o por licencias de terceros.**
 
 </div>
